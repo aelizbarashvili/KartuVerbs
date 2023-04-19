@@ -18,4 +18,4 @@ Kartu-Verbs database contains information about Georgian inflected verbs and it'
     sub_id: Id in Clarino database to keep link to the corresponding verb paradigm
     vn2: Verbal Noun for the inflected form
 
-r goal is to train a model which will predict a Verbal Noun based on the following information: form, tense_in_paradigm, person, number, preverb, pre2, root, sf2, caus_sf, ending, tsch_class, orph_type and sub_id
+Objective is to train a model which will predict a Verbal Noun based on the following information: form, tense_in_paradigm, person, number, preverb, pre2, root, sf2, caus_sf, ending, tsch_class, orph_type and sub_id
