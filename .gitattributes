@@ -1,3 +1,4 @@
-data_vn+/** filter=lfs diff=lfs merge=lfs -text
+data_vn+ binary
+data_vn- binary
 data_vn+ filter=lfs diff=lfs merge=lfs -text
 data_vn- filter=lfs diff=lfs merge=lfs -text
