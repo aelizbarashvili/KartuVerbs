@@ -1,0 +1,67 @@
+@prefix ontoADR:      <http://semlis-test/ontoADRConf#> .
+@prefix tdb:   <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ja:    <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fuseki: <http://jena.apache.org/fuseki#> .
+@prefix text:    <http://jena.apache.org/text#> .
+# @prefix slFAERS: <http://semlis-test/faers/> .
+
+
+## Initialize TDB
+[] ja:loadClass "org.apache.jena.tdb.TDB" .
+tdb:DatasetTDB  rdfs:subClassOf  ja:RDFDataset .
+tdb:GraphTDB    rdfs:subClassOf  ja:Model .
+
+## Initialize text query
+[] ja:loadClass       "org.apache.jena.query.text.TextQuery" .
+# A TextDataset is a regular dataset with a text index.
+text:TextDataset      rdfs:subClassOf   ja:RDFDataset .
+# Lucene index
+text:TextIndexLucene  rdfs:subClassOf   text:TextIndex .
+# Elasticsearch index
+text:TextIndexES    rdfs:subClassOf   text:TextIndex .
+
+ontoADR:service_tdb_all  a                   fuseki:Service ;
+        rdfs:label                    "TDB f14" ;
+        fuseki:dataset                ontoADR:ontoADR-patientData_text ;
+        fuseki:name                   "kv14" ;
+        fuseki:serviceQuery           "query" , "sparql" ;
+        fuseki:serviceReadGraphStore  "get" ;
+        fuseki:serviceReadWriteGraphStore "data" ;
+        fuseki:serviceUpdate          "update" ;
+        fuseki:serviceUpload          "upload" .
+
+ontoADR:ontoADR-patientData_text a text:TextDataset; 
+	text:dataset 	ontoADR:ontoADR-patientData_dataset; 
+	text:index ontoADR:ontoADR-patientData_index . 
+
+ontoADR:ontoADR-patientData_dataset
+        a             tdb:DatasetTDB ;
+        tdb:location
+		"/DATA/clarino/2024/f14_fullvnnew/index" . ## on Achiko's laptop
+
+ontoADR:ontoADR-patientData_index a text:TextIndexLucene ;
+    text:directory
+	"/DATA/clarino/2024/f14_fullvnnew/index/lucene" ; ## on Achiko's laptop
+    text:entityMap ontoADR:entMap ;
+    text:storeValues false ;
+    text:analyzer
+        [ a text:ConfigurableAnalyzer ;
+	  text:tokenizer text:StandardTokenizer ;
+	  text:filters (text:ASCIIFoldingFilter text:LowerCaseFilter text:StandardFilter)
+        ] ;
+    text:queryParser text:AnalyzingQueryParser ;
+    text:multilingualSupport true ;
+.
+
+ontoADR:entMap a text:EntityMap ;
+    text:defaultField     "text" ;
+    text:entityField      "uri" ;
+    text:uidField         "uid" ;
+    text:langField        "lang" ;
+    text:graphField       "graph" ;
+    text:map (
+        [text:field "text" ; text:predicate rdfs:label ]
+         )
+.

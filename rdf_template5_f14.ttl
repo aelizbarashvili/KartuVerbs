@@ -1,0 +1,60 @@
+@prefix : <http://www.irisa.fr/LIS/sewelis/store18f252/#> .
+@prefix xml: <xml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix strdf: <http://strdf.di.uoa.gr/ontology#> .
+@prefix term: <http://www.irisa.fr/LIS/ferre/RDFS/term#> .
+@prefix lisql: <http://www.irisa.fr/LIS/ferre/RDFS/lisql#> .
+@prefix file: <http://www.irisa.fr/LIS/ferre/RDFS/file#> .
+
+<inflected_verb> rdf:type rdfs:Class .
+
+<tense> rdf:type rdf:Property .
+<surface_form> rdf:type rdf:Property .
+<person> rdf:type rdf:Property .
+<number> rdf:type rdf:Property .
+<root> rdf:type rdf:Property .
+<vn2> rdf:type rdf:Property .
+<preverb> rdf:type rdf:Property .
+<pre2> rdf:type rdf:Property .
+<sf2> rdf:type rdf:Property .
+<caus_sf> rdf:type rdf:Property .
+<ending> rdf:type rdf:Property .
+<sub-id> rdf:type rdf:Property .
+<tsch_class> rdf:type rdf:Property .
+<morph_type> rdf:type rdf:Property .
+
+
+<inflected_verb> rdfs:label "Inflected verb"@en .
+<inflected_verb> rdfs:label "ნაუღლები ზმნა"@ka .
+<tense> rdfs:label "Tense"@en .
+<tense> rdfs:label "დრო"@ka .
+<person> rdfs:label "Person"@en .
+<person> rdfs:label "პირი"@ka .
+<number> rdfs:label "Number"@en .
+<number> rdfs:label "რიცხვი"@ka .
+<root> rdfs:label "Root"@en .
+<root> rdfs:label "ფუძე"@ka .
+<vn2> rdfs:label "Georgian infinitive"@en .
+<vn2> rdfs:label "საწყისი"@ka .
+<preverb> rdfs:label "Preverb"@en .
+<preverb> rdfs:label "ზმნისწინი"@ka .
+<pre2> rdfs:label "Preradical"@en .
+<pre2> rdfs:label "ფუძის წინა მარკერი"@ka .
+<sf2> rdfs:label "Stem formant"@en .
+<sf2> rdfs:label "ფორმანტი"@ka .
+<ending> rdfs:label "Ending"@en .
+<ending> rdfs:label "დაბოლოება"@ka .
+<sub-id> rdfs:label "Clarino ID"@en .
+<sub-id> rdfs:label "Clarino ID"@ka .
+<surface_form> rdfs:label "Form"@en .
+<surface_form> rdfs:label "ფორმა"@ka .
+<tsch_class> rdfs:label "Tschenkeli verb class"@en .
+<tsch_class> rdfs:label "ჩხენკელის ზმნის კლასი"@ka .
+<morph_type> rdfs:label "Morphology Type"@en .
+<morph_type> rdfs:label "მორფოლოგიის ტიპი"@ka .
+<caus_sf> rdfs:label "Causative Suffix"@en .
+<caus_sf> rdfs:label "კაუზატივის სუფიქსი"@ka .
