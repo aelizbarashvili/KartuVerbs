@@ -1,0 +1,8 @@
+*\  to flag predicted verbal nouns as questionable when their associated values, including their common root ID number, exhibited discrepancies. Specifically, we look for instances where the combined value of the ID and verbal noun on one line differs from the value on the next line.
+
+awk -F\; 'BEGIN{a=""}{if(a!=$14$15){print(NR, $0); a=$14$15;}}' solution.csv
+
+
+*\ to deduce full verbal noun from a preverb and verbal noun
+gawk 'BEGIN {FS=";"} { if (substr($2, length($2),1) == "ა") print $1 $2; else print $2 }' file.csv >tmp1
+tr -d '-' tmp1 > file2.csv
