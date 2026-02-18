@@ -19,3 +19,6 @@ The Kartu-Verb database comprises data pertaining to inflected Georgian verbs an
 * vn: Verbal Noun for the inflected form.
 
 The objective of the project is to develop a model that can predict the Verbal Noun based on the provided information, including the form, tense_in_paradigm, person, number, preverb, pre2, root, sf2, caus_sf, ending, tsch_class, morph_type, id and sub_id.
+
+# Code
+The source code is publicly available under the GPL 2.0 license
