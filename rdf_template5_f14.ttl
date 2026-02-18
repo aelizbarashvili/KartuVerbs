@@ -27,7 +27,6 @@
 <tsch_class> rdf:type rdf:Property .
 <morph_type> rdf:type rdf:Property .
 
-
 <inflected_verb> rdfs:label "Inflected verb"@en .
 <inflected_verb> rdfs:label "ნაუღლები ზმნა"@ka .
 <tense> rdfs:label "Tense"@en .
@@ -37,15 +36,15 @@
 <number> rdfs:label "Number"@en .
 <number> rdfs:label "რიცხვი"@ka .
 <root> rdfs:label "Root"@en .
-<root> rdfs:label "ფუძე"@ka .
-<vn2> rdfs:label "Georgian infinitive"@en .
-<vn2> rdfs:label "საწყისი"@ka .
+<root> rdfs:label "ძირი"@ka .
+<vn2> rdfs:label "Verbal noun"@en .
+<vn2> rdfs:label "სახელზმნა"@ka .
 <preverb> rdfs:label "Preverb"@en .
 <preverb> rdfs:label "ზმნისწინი"@ka .
 <pre2> rdfs:label "Preradical"@en .
-<pre2> rdfs:label "ფუძის წინა მარკერი"@ka .
+<pre2> rdfs:label "მარკერი-12"@ka .
 <sf2> rdfs:label "Stem formant"@en .
-<sf2> rdfs:label "ფორმანტი"@ka .
+<sf2> rdfs:label "ვნებითი გვარის/თემის ნიშანი"@ka .
 <ending> rdfs:label "Ending"@en .
 <ending> rdfs:label "დაბოლოება"@ka .
 <sub-id> rdfs:label "Clarino ID"@en .
@@ -54,7 +53,9 @@
 <surface_form> rdfs:label "ფორმა"@ka .
 <tsch_class> rdfs:label "Tschenkeli verb class"@en .
 <tsch_class> rdfs:label "ჩხენკელის ზმნის კლასი"@ka .
-<morph_type> rdfs:label "Morphology Type"@en .
-<morph_type> rdfs:label "მორფოლოგიის ტიპი"@ka .
-<caus_sf> rdfs:label "Causative Suffix"@en .
-<caus_sf> rdfs:label "კაუზატივის სუფიქსი"@ka .
+#<morph_type> rdfs:label "Morphology Type"@en .
+#<morph_type> rdfs:label "მორფოლოგიის ტიპი"@ka .
+<class_morph_type> rdfs:label "Morphology class"@en .
+<class_morph_type> rdfs:label "მორფოლოგიის კლასი"@ka .
+<caus_sf> rdfs:label "Causative suffix"@en .
+<caus_sf> rdfs:label "კონტაქტის ნიშანი"@ka .
