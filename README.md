@@ -1,4 +1,4 @@
-# Kartu-Verb project
+# KartuVerbs project
 
 The Kartu-Verb database comprises data pertaining to inflected Georgian verbs and their associated characteristics. The data is stored in a CSV file, with information organized into the following fields:
 
