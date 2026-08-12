@@ -1,3 +1,22 @@
+# Data documentation
+
+## data_vn+withnotfullcroots
+
+Purpose:
+Labelled data used for Random Forest training and evaluation.
+
+Delimiter:
+semicolon (;)
+
+Target:
+vn
+
+Number of records:
+294,665
+
+Number of verbal-noun classes:
+493
+
 # KartuVerbs project
 
 The KartuVerb database comprises data pertaining to inflected Georgian verbs and their associated characteristics. The data is stored in a CSV file, with information organized into the following fields:
