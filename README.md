@@ -17,6 +17,33 @@ Number of records:
 Number of verbal-noun classes:
 493
 
+
+form
+    Inflected Georgian verb form.
+
+tense_in_paradigm
+    Tense within the verb paradigm.
+
+person
+    Grammatical person.
+
+number
+    Grammatical number.
+
+...
+
+id
+    Identifier of the common-root group in the source CLARINO data.
+
+sub_id
+    Original paradigm identifier in the source data.
+    During preprocessing its suffix is extracted and used as the
+    model feature sub_id.
+
+vn
+    Verbal noun; target variable of the classifier.
+
+
 # KartuVerbs project
 
 The KartuVerb database comprises data pertaining to inflected Georgian verbs and their associated characteristics. The data is stored in a CSV file, with information organized into the following fields:
