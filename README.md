@@ -45,7 +45,7 @@ KartuVerbs/
 
 ![Confusion matrix](figures/confusion_matrix_frequent_and_lower_f1.png)
 
-tsch_class, morph_type, id and sub_id.
+The main features include `tsch_class`, `morph_type`, `id`, and `sub_id`.
 
 # Source code
 The source code is publicly available under the GPL v2 license
