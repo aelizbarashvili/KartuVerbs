@@ -1,70 +1,52 @@
-# Data documentation
+# KartuVerbs
 
-## data_vn+withnotfullcroots
+**KartuVerbs** is a Linked Data and machine-learning resource for the
+Georgian verbal system.
 
-Purpose:
-Labelled data used for Random Forest training and evaluation.
+The project provides:
 
-Delimiter:
-semicolon (;)
+- a structured dataset of Georgian verb forms;
+- mappings between inflected forms and verbal nouns (masdars);
+- machine-learning models for predicting missing verbal nouns;
+- RDF representations of the lexical data;
+- SPARQL/Fuseki configuration files;
+- evaluation results and visualizations.
 
-Target:
-vn
+The current machine-learning experiments use Random Forest models to
+predict missing verbal nouns and evaluate model generalization using
+standard train/test splits, K-Fold cross-validation, and Group K-Fold
+validation.
 
-Number of records:
-294,665
+## Repository structure
 
-Number of verbal-noun classes:
-493
-
-
-form
-    Inflected Georgian verb form.
-
-tense_in_paradigm
-    Tense within the verb paradigm.
-
-person
-    Grammatical person.
-
-number
-    Grammatical number.
-
-...
-
-id
-    Identifier of the common-root group in the source CLARINO data.
-
-sub_id
-    Original paradigm identifier in the source data.
-    During preprocessing its suffix is extracted and used as the
-    model feature sub_id.
-
-vn
-    Verbal noun; target variable of the classifier.
+```text
+KartuVerbs/
+├── KartuVerbs.ipynb
+├── KartuVerbs_2.1_RF.ipynb
+├── KartuVerbs_2.2_RF.ipynb
+│
+├── data/        # Input datasets
+├── scripts/     # Data processing and RDF conversion scripts
+├── RDF/         # RDF templates and Apache Jena Fuseki configuration
+├── figures/     # Generated figures
+├── results/     # Evaluation results and predictions
+├── models/      # Model metadata
+│
+├── README.md
+└── LICENSE
 
 
-# KartuVerbs project
 
-The KartuVerb database comprises data pertaining to inflected Georgian verbs and their associated characteristics. The data is stored in a CSV file, with information organized into the following fields:
+## Feature importance
 
-* form: The inflected form of a Georgian verb.
-* tense_in_paradigm: The tense of the inflected form.
-* person: The person of the inflected form (1st, 2nd, 3rd).
-* number: The number of the inflected form (singular, plural).
-* preverb: The preverb associated with the inflected form.
-* pre2: The preradical of the inflected form.
-* root: The root of the inflected form.
-* sf2: The stem formant of the inflected form.
-* caus_sf: The causative stem formant of the inflected form.
-* ending: The ending of the inflected form.
-* tsch_class: the Tschkhenkeli class to which the form belongs.
-* morph_type: the morphology type to which the form belongs.
-* id: Id in Clarino database to keep link to the corresponding croot.
-* sub_id: Id in Clarino database to keep link to the corresponding verb paradigm.
-* vn: Verbal Noun for the inflected form.
+![Random Forest feature importance](figures/random_forest_feature_importance.png)
 
-The objective of the project is to develop a model that can predict the Verbal Noun based on the provided information, including the form, tense_in_paradigm, person, number, preverb, pre2, root, sf2, caus_sf, ending, tsch_class, morph_type, id and sub_id.
+## Classification results
+
+![Confusion matrix](figures/confusion_matrix_top20.png)
+
+
+tsch_class, morph_type, id and sub_id.
 
 # Source code
 The source code is publicly available under the GPL v2 license
