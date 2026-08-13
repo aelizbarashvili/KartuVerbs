@@ -1,0 +1,6 @@
+Evaluation,Original (%),Without sub_id (%),Difference (pp)
+Standard 80/20,99.9067,98.4983,-1.4084
+OOB,99.9113,98.5284,-1.3829
+Five-fold KFold,99.9162,98.5648,-1.3514
+GroupShuffleSplit,65.3409,67.0256,1.6847
+Five-fold GroupKFold,67.5937,68.4177,0.824

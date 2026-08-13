@@ -1,0 +1,13 @@
+# Large trained models
+models/*.joblib
+
+# Jupyter temporary files
+#.ipynb_checkpoints/
+
+# Python temporary files
+#__pycache__/
+#*.pyc
+
+# Virtual environments
+#venv/
+#.env/
