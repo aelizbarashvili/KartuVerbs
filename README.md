@@ -1,5 +1,5 @@
 # KartuVerbs
-tttt
+
 **KartuVerbs** is a Linked Data and machine-learning resource for the
 Georgian verbal system.
 
