@@ -43,8 +43,7 @@ KartuVerbs/
 
 ## Classification results
 
-![Confusion matrix](figures/confusion_matrix_top20.png)
-
+![Confusion matrix](figures/confusion_matrix_frequent_and_lower_f1.png)
 
 tsch_class, morph_type, id and sub_id.
 
