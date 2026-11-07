@@ -1,3 +1,5 @@
+Code: GPL v2. Data (data/): CC BY 4.0. The data is based on the Georgian linguistic database by Paul Meurer that is part of the Georgian National Corpus (see https://clarino.uib.no/gnc), used here with permission.
+
 # KartuVerbs
 
 **KartuVerbs** is a Linked Data and machine-learning resource for the
